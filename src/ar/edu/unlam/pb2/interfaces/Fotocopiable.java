@@ -4,5 +4,5 @@ import ar.edu.unlam.pb2.Libro;
 
 public interface Fotocopiable {
 	
-	public String fotocopiar(Libro libro);
+	public String fotocopiar();
 }

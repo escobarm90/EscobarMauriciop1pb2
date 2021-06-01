@@ -23,6 +23,12 @@ public abstract class Libro {
 	public String getNombre() {
 		return nombre;
 	}
+
+	public String fotocopiar() {
+		return "";
+	}
+	
+	
 	
 	
 }

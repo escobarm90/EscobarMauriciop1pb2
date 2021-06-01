@@ -9,8 +9,8 @@ public class LibroHistoria extends Libro implements Fotocopiable{
 		
 	}
 	
-	
-	public String fotocopiar(Libro libro) {
+	@Override
+	public String fotocopiar() {
 		return "Este libro esta siendo fotocopiado";
 	}
 

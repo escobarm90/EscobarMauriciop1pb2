@@ -3,7 +3,6 @@ package ar.edu.unlam.pb2;
 import java.util.HashSet;
 import java.util.Set;
 
-import ar.edu.unlam.Montacargas.Carga;
 
 public class Biblioteca {
 	
@@ -31,6 +30,10 @@ public class Biblioteca {
 			}
 		}
 		return librobuscado;
+	}
+	
+	public String fotocopiarLibroPorCodigo(Integer cod) {
+		return buscarLibroPorId(cod).fotocopiar();
 	}
 
 }
