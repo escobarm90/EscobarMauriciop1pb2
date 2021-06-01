@@ -8,5 +8,10 @@ public class LibroGeografia extends Libro implements Fotocopiable{
 		super(codigo, autor, nombre);
 		
 	}
+	
+
+	public String fotocopiar(Libro libro) {
+		return "Este libro esta siendo fotocopiado";
+	}
 
 }

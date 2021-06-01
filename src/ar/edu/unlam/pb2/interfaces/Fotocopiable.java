@@ -1,5 +1,8 @@
 package ar.edu.unlam.pb2.interfaces;
 
-public interface Fotocopiable {
+import ar.edu.unlam.pb2.Libro;
 
+public interface Fotocopiable {
+	
+	public String fotocopiar(Libro libro);
 }
