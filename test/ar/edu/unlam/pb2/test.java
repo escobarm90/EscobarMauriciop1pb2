@@ -56,6 +56,24 @@ public class test {
 		assertEquals(libro1,biblioteca.buscarLibroPorId(1));
 	}
 	
+	@Test
+	public void queSeRegistrenLosPrestamos() {
+		Libro libro1 = new LibroGeografia(1,"xxx","yyyy");
+		Libro libro2 = new LibroHistoria(2,"zzz","rrrr");
+		Libro libro3 = new LibroMatematicas(3,"wwww","mmmm");
+		Biblioteca biblioteca = new Biblioteca("Biblioteca de la nacion");
+		Estudiante yo = new Estudiante(3333333, "Mauricio","Escobar");
+		
+		biblioteca.agregarLibro(libro1);
+		biblioteca.agregarLibro(libro2);
+		biblioteca.agregarLibro(libro3);
+		
+		biblioteca.prestarLibro(libro1, yo);
+		
+		assertEquals(2,biblioteca.getLibrosEnLaBiblioteca(),0.1);
+		
+	}
+	
 	
 	
 }
