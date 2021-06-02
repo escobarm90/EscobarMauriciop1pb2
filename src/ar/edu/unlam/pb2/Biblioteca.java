@@ -40,11 +40,11 @@ public class Biblioteca {
 		return buscarLibroPorId(cod).fotocopiar();
 	}
 	
-	public Boolean prestarLibro(Libro libro, Estudiante estudiante) {		
-		if(libros.contains(libro) && estudiante.getCantidadDeLibrosPrestados()<2) {
+	public Boolean prestarLibro(Integer libro, Estudiante estudiante) {		
+		if(libros.contains(buscarLibroPorId(libro)) && estudiante.getCantidadDeLibrosPrestados()<2) {
 			cantidadDePrestamos++;			
-			this.prestamo = new Prestamo(cantidadDePrestamos,estudiante,libro);
-			libros.remove(libro);
+			this.prestamo = new Prestamo(cantidadDePrestamos,estudiante,buscarLibroPorId(libro));
+			libros.remove(buscarLibroPorId(libro));
 			return true;
 		}return false;
 	}

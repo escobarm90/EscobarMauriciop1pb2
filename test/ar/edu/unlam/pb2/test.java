@@ -68,7 +68,7 @@ public class test {
 		biblioteca.agregarLibro(libro2);
 		biblioteca.agregarLibro(libro3);
 		
-		biblioteca.prestarLibro(libro1, yo);
+		biblioteca.prestarLibro(1, yo);
 		
 		assertEquals(2,biblioteca.getLibrosEnLaBiblioteca(),0.1);
 		
