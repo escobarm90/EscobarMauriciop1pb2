@@ -22,6 +22,15 @@ public class Estudiante {
 		return prestamos.size();
 	}
 	
+	public void getPrestamo(Prestamo prestamo) {
+		prestamos.add(prestamo);
+	}
+	
+	public Prestamo devolverPrestamo(Prestamo prestamo) {
+		prestamos.remove(prestamo);
+		return prestamo;
+	}
+	
 	
 	
 	

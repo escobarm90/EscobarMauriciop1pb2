@@ -45,6 +45,7 @@ public class Biblioteca {
 			cantidadDePrestamos++;			
 			this.prestamo = new Prestamo(cantidadDePrestamos,estudiante,buscarLibroPorId(libro));
 			libros.remove(buscarLibroPorId(libro));
+			
 			return true;
 		}return false;
 	}
