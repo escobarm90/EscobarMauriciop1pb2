@@ -23,6 +23,10 @@ public class Prestamo {
 	public Libro getLibro() {
 		return libro;
 	}
+	
+	public Prestamo getPrestamoPorLibro(Libro libro){
+		return this;
+	}
 
 	@Override
 	public int hashCode() {

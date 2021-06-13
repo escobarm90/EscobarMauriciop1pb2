@@ -50,10 +50,10 @@ public class Biblioteca {
 		}return false;
 	}
 	
-	public Boolean devolucionLibro(Libro libro) {
-		return libros.add(libro);
+	public Boolean devolucionLibro(Integer libro,Estudiante estudiante) {
+		return libros.add(estudiante.devolverPrestamo(libro));		
 	}
 	
-	
+		
 
 }

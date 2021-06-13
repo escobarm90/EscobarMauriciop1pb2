@@ -54,6 +54,8 @@ public class test {
 		biblioteca.agregarLibro(libro3);
 		
 		assertEquals(libro1,biblioteca.buscarLibroPorId(1));
+		assertEquals(libro2,biblioteca.buscarLibroPorId(2));
+		assertEquals(libro3,biblioteca.buscarLibroPorId(3));
 	}
 	
 	@Test
@@ -94,6 +96,29 @@ public class test {
 		biblioteca.prestarLibro(4, yo);
 		
 		assertEquals(2,biblioteca.getLibrosEnLaBiblioteca(),0.1);
+	}
+	
+	@Test
+	public void queUnEstudiantePuedaDevolverUnLibroPrestado() {
+		Libro libro1 = new LibroGeografia(1,"xxx","yyyy");
+		Libro libro2 = new LibroHistoria(2,"zzz","rrrr");
+		Libro libro3 = new LibroMatematicas(3,"wwww","mmmm");
+		Libro libro4 = new LibroMatematicas(4,"dddd","ffff");
+		Biblioteca biblioteca = new Biblioteca("Biblioteca de la nacion");
+		Estudiante yo = new Estudiante (33333333, "Mauricio", "Escobar");
+		
+		biblioteca.agregarLibro(libro1);
+		biblioteca.agregarLibro(libro2);
+		biblioteca.agregarLibro(libro3);
+		biblioteca.agregarLibro(libro4);
+		
+		biblioteca.prestarLibro(1, yo);
+		biblioteca.prestarLibro(2, yo);
+		
+		biblioteca.devolucionLibro(1, yo);
+		biblioteca.devolucionLibro(2, yo);
+		
+		assertEquals(4,biblioteca.getLibrosEnLaBiblioteca(),0.1);
 	}
 	
 	
