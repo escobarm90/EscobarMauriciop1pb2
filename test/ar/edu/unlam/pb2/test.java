@@ -74,6 +74,28 @@ public class test {
 		
 	}
 	
+	@Test
+	public void queNoSePresteMasDeUnLibroPorEstudiante() {
+		Libro libro1 = new LibroGeografia(1,"xxx","yyyy");
+		Libro libro2 = new LibroHistoria(2,"zzz","rrrr");
+		Libro libro3 = new LibroMatematicas(3,"wwww","mmmm");
+		Libro libro4 = new LibroMatematicas(4,"dddd","ffff");
+		Biblioteca biblioteca = new Biblioteca("Biblioteca de la nacion");
+		Estudiante yo = new Estudiante (33333333, "Mauricio", "Escobar");
+		
+		biblioteca.agregarLibro(libro1);
+		biblioteca.agregarLibro(libro2);
+		biblioteca.agregarLibro(libro3);
+		biblioteca.agregarLibro(libro4);
+		
+		biblioteca.prestarLibro(1, yo);
+		biblioteca.prestarLibro(2, yo);
+		biblioteca.prestarLibro(3, yo);
+		biblioteca.prestarLibro(4, yo);
+		
+		assertEquals(2,biblioteca.getLibrosEnLaBiblioteca(),0.1);
+	}
+	
 	
 	
 }

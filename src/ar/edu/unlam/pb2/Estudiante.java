@@ -16,6 +16,7 @@ public class Estudiante {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.prestamos= new HashSet<Prestamo>();
+		
 	}
 
 	public Integer getCantidadDeLibrosPrestados() {
@@ -26,9 +27,9 @@ public class Estudiante {
 		prestamos.add(prestamo);
 	}
 	
-	public Prestamo devolverPrestamo(Prestamo prestamo) {
+	public Libro devolverPrestamo(Prestamo prestamo) {
 		prestamos.remove(prestamo);
-		return prestamo;
+		return prestamo.getLibro();
 	}
 	
 	

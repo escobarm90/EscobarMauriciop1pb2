@@ -41,13 +41,17 @@ public class Biblioteca {
 	}
 	
 	public Boolean prestarLibro(Integer libro, Estudiante estudiante) {		
-		if(libros.contains(buscarLibroPorId(libro)) && estudiante.getCantidadDeLibrosPrestados()<2) {
-			cantidadDePrestamos++;			
+		if(libros.contains(buscarLibroPorId(libro)) && estudiante.getCantidadDeLibrosPrestados() < 2) {
+			this.cantidadDePrestamos++;
 			this.prestamo = new Prestamo(cantidadDePrestamos,estudiante,buscarLibroPorId(libro));
-			libros.remove(buscarLibroPorId(libro));
-			
+			estudiante.getPrestamo(prestamo);
+			libros.remove(buscarLibroPorId(libro));			
 			return true;
 		}return false;
+	}
+	
+	public Boolean devolucionLibro(Libro libro) {
+		return libros.add(libro);
 	}
 	
 	
